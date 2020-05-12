@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+ <form action="/firststep/" method="post">
+ Keyword:<br>
+ <input type="text" name="keyword"><br>
+ URL:<br>
+ <input type="text" name="url"><br><br>
+ <input name="searchBtn" type="submit" value="Search">
+ </form>
+
+ <input type="text" readonly value={{message}}><br>
+
+{% endblock %}

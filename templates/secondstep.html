@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+ <form action="/secondstep/" method="post">
+ Keywords:<br>
+ <input type="text" name="keywords"><br>
+ <input name="searchBtn" type="submit" value = "Search">
+ <br><br>
+ </form>
+
+ <form action="/secondstep/" method="post">
+ URL:<br>
+ <input type="text" name="url"><br>
+ <input name="addUrlBtn" type="submit" value = "Add URL">
+ <br><br>
+</form>
+
+<table style="width:100%">
+  <tr>
+    <th>Score</th>
+    <th>URL</th>
+    <th>Words and Counts</th>
+  </tr>
+  {{output|safe}}
+</table>
+
+{% endblock %}
